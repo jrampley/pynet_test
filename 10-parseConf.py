@@ -11,4 +11,4 @@ for line in not_aes:
         if 'transform' in child.text:
             m = re.search(r"set transform-set (.*)$", child.text)        
             encryption = m.group(1)
-    print "  {0} >>> {1}".format(line.text.strip(), encryption)
+    print "  %s >>> %s" % (line.text, encryption)
